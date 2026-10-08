@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_SE_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+NOT($Permission.Color_Review_Sign_SE) &amp;&amp;
+((ISCHANGED(Pink_SO_SE__c) &amp;&amp; Pink_SO_SE__c) ||
+   (ISCHANGED(Red_SO_SE__c) &amp;&amp; Red_SO_SE__c))</errorConditionFormula>
+    <errorDisplayField>Pink_SO_SE__c</errorDisplayField>
+    <errorMessage>Only Solutions Engineering can sign off the Solutions Engineering box. You can clear a sign-off, but not set it. Ask an admin for the Color Review Signer - Solutions Engineering permission set if you hold this role.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Exit_Requires_Complete</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+ISCHANGED(CapStrat_Stage__c) &amp;&amp;
+ISPICKVAL(PRIORVALUE(CapStrat_Stage__c), &quot;Response In Progress&quot;) &amp;&amp;
+OR(ISPICKVAL(CapStrat_Stage__c, &quot;Submitted - Awaiting Customer Decision&quot;),
+   ISPICKVAL(CapStrat_Stage__c, &quot;RFP Shortlisted&quot;),
+   ISPICKVAL(CapStrat_Stage__c, &quot;Shortlisted - Awaiting Customer Decision&quot;),
+   ISPICKVAL(CapStrat_Stage__c, &quot;Awarded&quot;)) &amp;&amp;
+NOT(ISPICKVAL(Color_Review_Stage__c, &quot;Complete&quot;)) &amp;&amp;
+NOT(ISPICKVAL(PRIORVALUE(Color_Review_Stage__c), &quot;Complete&quot;))</errorConditionFormula>
+    <errorDisplayField>CapStrat_Stage__c</errorDisplayField>
+    <errorMessage>All color reviews must be Complete before this bid can be marked Submitted, Shortlisted or Awarded. Cancelling or no-bidding is still allowed.</errorMessage>
+</ValidationRule>

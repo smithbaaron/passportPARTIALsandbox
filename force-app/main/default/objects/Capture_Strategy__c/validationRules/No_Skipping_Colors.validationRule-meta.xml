@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Skipping_Colors</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+ISCHANGED(Color_Review_Stage__c) &amp;&amp;
+CASE(TEXT(Color_Review_Stage__c),
+  &quot;Red Review&quot;,   IF(ISBLANK(Pink_Completed_Date__c) &amp;&amp; NOT(Pink_Skipped__c), 1, 0),
+  &quot;Blue Review&quot;,  IF(ISBLANK(Red_Completed_Date__c) || (Total_Requirements__c &gt; 0 &amp;&amp; Addressed_Requirements__c &lt; Total_Requirements__c), 1, 0),
+  &quot;Gold Review&quot;,  IF(ISBLANK(Blue_Completed_Date__c), 1, 0),
+  &quot;Green Review&quot;, IF(ISBLANK(Gold_Completed_Date__c), 1, 0),
+  &quot;Complete&quot;,     IF(ISBLANK(Green_Completed_Date__c), 1, 0),
+  0) = 1</errorConditionFormula>
+    <errorDisplayField>Color_Review_Stage__c</errorDisplayField>
+    <errorMessage>Reviews must be completed in order. The previous color needs a Completed Date (it is stamped automatically once its required sign-offs and deliverables are in), and Blue cannot open until every RFP Requirement is Validated or has a documented exception.</errorMessage>
+</ValidationRule>

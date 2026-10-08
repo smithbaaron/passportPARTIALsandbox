@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_Legal_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+NOT($Permission.Color_Review_Sign_Legal) &amp;&amp;
+((ISCHANGED(Red_SO_Legal__c) &amp;&amp; Red_SO_Legal__c))</errorConditionFormula>
+    <errorDisplayField>Red_SO_Legal__c</errorDisplayField>
+    <errorMessage>Only Legal can sign off the Legal box. You can clear a sign-off, but not set it. Ask an admin for the Color Review Signer - Legal permission set if you hold this role.</errorMessage>
+</ValidationRule>

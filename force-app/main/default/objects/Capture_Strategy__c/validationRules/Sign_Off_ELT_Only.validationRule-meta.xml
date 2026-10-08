@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_ELT_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+NOT($Permission.Color_Review_Sign_ELT) &amp;&amp;
+((ISCHANGED(Gold_SO_ELT__c) &amp;&amp; Gold_SO_ELT__c))</errorConditionFormula>
+    <errorDisplayField>Gold_SO_ELT__c</errorDisplayField>
+    <errorMessage>Only ELT can sign off the ELT box. You can clear a sign-off, but not set it. Ask an admin for the Color Review Signer - ELT permission set if you hold this role.</errorMessage>
+</ValidationRule>

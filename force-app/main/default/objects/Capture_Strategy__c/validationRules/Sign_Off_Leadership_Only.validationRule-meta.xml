@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_Leadership_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+NOT($Permission.Color_Review_Sign_Leadership) &amp;&amp;
+((ISCHANGED(Pink_SO_Leadership__c) &amp;&amp; Pink_SO_Leadership__c) ||
+   (ISCHANGED(Blue_SO_Sales_Leadership__c) &amp;&amp; Blue_SO_Sales_Leadership__c) ||
+   (ISCHANGED(Gold_SO_Sales_CS_Leadership__c) &amp;&amp; Gold_SO_Sales_CS_Leadership__c))</errorConditionFormula>
+    <errorDisplayField>Pink_SO_Leadership__c</errorDisplayField>
+    <errorMessage>Only Sales / CS Leadership can sign off the Sales / CS Leadership box. You can clear a sign-off, but not set it. Ask an admin for the Color Review Signer - Sales / CS Leadership permission set if you hold this role.</errorMessage>
+</ValidationRule>

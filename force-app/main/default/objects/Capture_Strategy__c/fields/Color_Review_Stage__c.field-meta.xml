@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Color_Review_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Color Review Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CapStrat_Stage__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>Pink Review</fullName>
+                <default>false</default>
+                <label>Pink Review</label>
+            </value>
+            <value>
+                <fullName>Red Review</fullName>
+                <default>false</default>
+                <label>Red Review</label>
+            </value>
+            <value>
+                <fullName>Blue Review</fullName>
+                <default>false</default>
+                <label>Blue Review</label>
+            </value>
+            <value>
+                <fullName>Gold Review</fullName>
+                <default>false</default>
+                <label>Gold Review</label>
+            </value>
+            <value>
+                <fullName>Green Review</fullName>
+                <default>false</default>
+                <label>Green Review</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Not Started</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Pink Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Red Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Blue Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Gold Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Green Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Response In Progress</controllingFieldValue>
+            <valueName>Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Submitted - Awaiting Customer Decision</controllingFieldValue>
+            <valueName>Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFP Shortlisted</controllingFieldValue>
+            <valueName>Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shortlisted - Awaiting Customer Decision</controllingFieldValue>
+            <valueName>Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Awarded</controllingFieldValue>
+            <valueName>Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFP Closed</controllingFieldValue>
+            <valueName>Complete</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

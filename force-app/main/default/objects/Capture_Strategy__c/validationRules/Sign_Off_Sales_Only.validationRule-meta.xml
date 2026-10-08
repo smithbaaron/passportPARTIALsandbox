@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_Sales_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+NOT($Permission.Color_Review_Sign_Sales) &amp;&amp;
+((ISCHANGED(Pink_SO_Sales__c) &amp;&amp; Pink_SO_Sales__c))</errorConditionFormula>
+    <errorDisplayField>Pink_SO_Sales__c</errorDisplayField>
+    <errorMessage>Only Sales can sign off the Sales box. You can clear a sign-off, but not set it. Ask an admin for the Color Review Signer - Sales permission set if you hold this role.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_Marketing_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+NOT($Permission.Color_Review_Sign_Marketing) &amp;&amp;
+((ISCHANGED(Blue_SO_Marketing__c) &amp;&amp; Blue_SO_Marketing__c))</errorConditionFormula>
+    <errorDisplayField>Blue_SO_Marketing__c</errorDisplayField>
+    <errorMessage>Only Marketing can sign off the Marketing box. You can clear a sign-off, but not set it. Ask an admin for the Color Review Signer - Marketing permission set if you hold this role.</errorMessage>
+</ValidationRule>
