@@ -2,6 +2,11 @@
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Field access for the Color Review process on Capture Strategy + RFP Requirements. Assign to the proposal team and admins.</description>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Days_To_Active_Due__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Capture_Strategy__c.Slack_Channel_Email__c</field>
         <readable>true</readable>
