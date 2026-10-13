@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UiFormatSpecificationSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <field>Capture_Strategy__c.Color_Review_Stage__c</field>
+    <formatType>ICON</formatType>
+    <masterLabel>Color Review Stage Indicator</masterLabel>
+    <sobjectType>Capture_Strategy__c</sobjectType>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;circle&quot;,&quot;iconColor&quot;:&quot;gray&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>1</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Not Started</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;circle&quot;,&quot;iconColor&quot;:&quot;purple&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>2</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Pink Review</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;circle&quot;,&quot;iconColor&quot;:&quot;red&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>3</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Red Review</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;circle&quot;,&quot;iconColor&quot;:&quot;blue&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>4</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Blue Review</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;circle&quot;,&quot;iconColor&quot;:&quot;orange&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>5</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Gold Review</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;circle&quot;,&quot;iconColor&quot;:&quot;green&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>6</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Green Review</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+    <uiFormatSpecifications>
+        <formatProperties>{&quot;icon&quot;:&quot;thumbs_up&quot;,&quot;iconColor&quot;:&quot;green&quot;}</formatProperties>
+        <formatType>ICON</formatType>
+        <order>7</order>
+        <visibilityRule>
+            <criteria>
+                <leftValue>{!Record.Color_Review_Stage__c}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Complete</rightValue>
+            </criteria>
+        </visibilityRule>
+    </uiFormatSpecifications>
+</UiFormatSpecificationSet>

@@ -47,3 +47,14 @@ CS, Leadership (Pink), Marketing and Non-author boxes are optional. A Completed 
 - For Slack, enable *Send emails to this channel* on the bid's channel and paste the address into **Slack Channel Email** on the record.
 - `Color_Review_Config__mdt` drives SLA days and Target Offsets per color; the Engine reads both.
 - Completed Dates and sign-offs are stamped by automation; a send-back clears them so reviewers re-sign.
+
+## Conditional formatting (native, no package)
+
+Two rulesets in `uiFormatSpecificationSets/` replace the emoji indicators on the record page:
+
+- **Color Review Stage Indicator** on Color Review Stage: gray circle (Not Started), purple (Pink, the palette has no pink), red, blue, orange (Gold, no yellow available), green, and a green thumbs-up at Complete.
+- **Color Review Due Status** on Active Due Date: green happy face (on track), orange neutral face (closes today or tomorrow), red sad face (past due). Driven by the `Days_To_Active_Due__c` formula.
+
+Available icons in this org: circle, square, diamond, heart, rocket, thumbs_up, thumbs_down, question_mark, happy_face, neutral_face, sad_face. Colors: red, blue, green, orange, purple, gray.
+
+Attach each ruleset to its field in Lightning App Builder (select the field, Conditional Formatting, pick the ruleset). The Metadata API property that stores that link is not documented and the page must be retrieved after attaching to capture it in source.
