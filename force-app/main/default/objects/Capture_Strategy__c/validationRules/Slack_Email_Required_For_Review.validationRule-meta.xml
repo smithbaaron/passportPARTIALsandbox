@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Slack_Email_Required_For_Review</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
+ISCHANGED(Color_Review_Stage__c) &amp;&amp;
+NOT(ISBLANK(TEXT(Color_Review_Stage__c))) &amp;&amp;
+NOT(ISPICKVAL(Color_Review_Stage__c, &quot;Not Started&quot;)) &amp;&amp;
+ISBLANK(Slack_Channel_Email__c)</errorConditionFormula>
+    <errorDisplayField>Slack_Channel_Email__c</errorDisplayField>
+    <errorMessage>Enter the bid's Slack Channel Email before opening a color review so the team is notified in Slack. In the channel: Integrations, then Send emails to this channel.</errorMessage>
+</ValidationRule>

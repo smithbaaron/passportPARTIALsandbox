@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red_Narrative_Approved_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User who checked Narrative Approved on the Red Review. Stamped by the Sign-Off Stamper flow.</description>
+    <externalId>false</externalId>
+    <label>Narrative Approved By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Capture Strategies (Red Narrative Approved)</relationshipLabel>
+    <relationshipName>CapStrat_Red_Narrative_Approved_By</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

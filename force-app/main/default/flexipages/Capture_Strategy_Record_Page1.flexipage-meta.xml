@@ -539,38 +539,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Green_SO_PropOps__c</fieldItem>
-                <identifier>RecordGreen_SO_PropOps_cField</identifier>
+                <fieldItem>Record.Green_QC_Complete__c</fieldItem>
+                <identifier>RecordGreen_QC_Complete_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Green_SO_PropOps_Date__c</fieldItem>
-                <identifier>RecordGreen_SO_PropOps_Date_cField</identifier>
+                <fieldItem>Record.Green_QC_Complete_By__c</fieldItem>
+                <identifier>RecordGreen_QC_Complete_By_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Green_SO_Non_Author__c</fieldItem>
-                <identifier>RecordGreen_SO_Non_Author_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Green_SO_Non_Author_Date__c</fieldItem>
-                <identifier>RecordGreen_SO_Non_Author_Date_cField</identifier>
+                <fieldItem>Record.Green_QC_Complete_Date__c</fieldItem>
+                <identifier>RecordGreen_QC_Complete_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-601c4ee4-4b53-4c3a-8e68-c0e43b74a7ba</name>
@@ -627,16 +617,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Gold_Executive_Approval__c</fieldItem>
-                <identifier>RecordGold_Executive_Approval_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.ELT_Review_Required__c</fieldItem>
                 <identifier>RecordELT_Review_Required_cField</identifier>
             </fieldInstance>
@@ -681,58 +661,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Gold_SO_PropOps__c</fieldItem>
-                <identifier>RecordGold_SO_PropOps_cField</identifier>
+                <fieldItem>Record.Gold_Executive_Approval__c</fieldItem>
+                <identifier>RecordGold_Executive_Approval_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Gold_SO_PropOps_Date__c</fieldItem>
-                <identifier>RecordGold_SO_PropOps_Date_cField</identifier>
+                <fieldItem>Record.Gold_Executive_Approval_By__c</fieldItem>
+                <identifier>RecordGold_Executive_Approval_By_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Gold_SO_Sales_CS_Leadership__c</fieldItem>
-                <identifier>RecordGold_SO_Sales_CS_Leadership_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Gold_SO_Sales_CS_Leadership_Date__c</fieldItem>
-                <identifier>RecordGold_SO_Sales_CS_Leadership_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Gold_SO_ELT__c</fieldItem>
-                <identifier>RecordGold_SO_ELT_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Gold_SO_ELT_Date__c</fieldItem>
-                <identifier>RecordGold_SO_ELT_Date_cField</identifier>
+                <fieldItem>Record.Gold_Executive_Approval_Date__c</fieldItem>
+                <identifier>RecordGold_Executive_Approval_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-lwir2e4bk4e</name>
@@ -781,16 +731,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Blue_Pricing_Assumptions__c</fieldItem>
                 <identifier>RecordBlue_Pricing_Assumptions_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Blue_Pricing_Approved__c</fieldItem>
-                <identifier>RecordBlue_Pricing_Approved_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -873,78 +813,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_PropOps__c</fieldItem>
-                <identifier>RecordBlue_SO_PropOps_cField</identifier>
+                <fieldItem>Record.Blue_Pricing_Approved__c</fieldItem>
+                <identifier>RecordBlue_Pricing_Approved_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_PropOps_Date__c</fieldItem>
-                <identifier>RecordBlue_SO_PropOps_Date_cField</identifier>
+                <fieldItem>Record.Blue_Pricing_Approved_By__c</fieldItem>
+                <identifier>RecordBlue_Pricing_Approved_By_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_Sales_Leadership__c</fieldItem>
-                <identifier>RecordBlue_SO_Sales_Leadership_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_Sales_Leadership_Date__c</fieldItem>
-                <identifier>RecordBlue_SO_Sales_Leadership_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_CS__c</fieldItem>
-                <identifier>RecordBlue_SO_CS_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_CS_Date__c</fieldItem>
-                <identifier>RecordBlue_SO_CS_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_Marketing__c</fieldItem>
-                <identifier>RecordBlue_SO_Marketing_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Blue_SO_Marketing_Date__c</fieldItem>
-                <identifier>RecordBlue_SO_Marketing_Date_cField</identifier>
+                <fieldItem>Record.Blue_Pricing_Approved_Date__c</fieldItem>
+                <identifier>RecordBlue_Pricing_Approved_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2a62a8f3-1e83-455f-b5cf-a4ef774aba44</name>
@@ -1085,78 +975,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_PropOps__c</fieldItem>
-                <identifier>RecordRed_SO_PropOps_cField</identifier>
+                <fieldItem>Record.Red_Narrative_Approved__c</fieldItem>
+                <identifier>RecordRed_Narrative_Approved_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_PropOps_Date__c</fieldItem>
-                <identifier>RecordRed_SO_PropOps_Date_cField</identifier>
+                <fieldItem>Record.Red_Narrative_Approved_By__c</fieldItem>
+                <identifier>RecordRed_Narrative_Approved_By_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_Sales_CS__c</fieldItem>
-                <identifier>RecordRed_SO_Sales_CS_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_Sales_CS_Date__c</fieldItem>
-                <identifier>RecordRed_SO_Sales_CS_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_SE__c</fieldItem>
-                <identifier>RecordRed_SO_SE_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_SE_Date__c</fieldItem>
-                <identifier>RecordRed_SO_SE_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_Legal__c</fieldItem>
-                <identifier>RecordRed_SO_Legal_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Red_SO_Legal_Date__c</fieldItem>
-                <identifier>RecordRed_SO_Legal_Date_cField</identifier>
+                <fieldItem>Record.Red_Narrative_Approved_Date__c</fieldItem>
+                <identifier>RecordRed_Narrative_Approved_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-ae499555-bac8-4374-b3a4-dee2be0acae4</name>
@@ -1233,16 +1073,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Pink_Skipped__c</fieldItem>
-                <identifier>RecordPink_Skipped_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Pink_Target_Date__c</fieldItem>
                 <identifier>RecordPink_Target_Date_cField</identifier>
             </fieldInstance>
@@ -1277,98 +1107,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_PropOps__c</fieldItem>
-                <identifier>RecordPink_SO_PropOps_cField</identifier>
+                <fieldItem>Record.Pink_Strategy_Aligned__c</fieldItem>
+                <identifier>RecordPink_Strategy_Aligned_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_PropOps_Date__c</fieldItem>
-                <identifier>RecordPink_SO_PropOps_Date_cField</identifier>
+                <fieldItem>Record.Pink_Strategy_Aligned_By__c</fieldItem>
+                <identifier>RecordPink_Strategy_Aligned_By_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_Sales__c</fieldItem>
-                <identifier>RecordPink_SO_Sales_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_Sales_Date__c</fieldItem>
-                <identifier>RecordPink_SO_Sales_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_CS__c</fieldItem>
-                <identifier>RecordPink_SO_CS_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_CS_Date__c</fieldItem>
-                <identifier>RecordPink_SO_CS_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_SE__c</fieldItem>
-                <identifier>RecordPink_SO_SE_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_SE_Date__c</fieldItem>
-                <identifier>RecordPink_SO_SE_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_Leadership__c</fieldItem>
-                <identifier>RecordPink_SO_Leadership_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Pink_SO_Leadership_Date__c</fieldItem>
-                <identifier>RecordPink_SO_Leadership_Date_cField</identifier>
+                <fieldItem>Record.Pink_Strategy_Aligned_Date__c</fieldItem>
+                <identifier>RecordPink_Strategy_Aligned_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-8d4c6050-ff0c-42a4-b7b9-749d8c9e2da9</name>
@@ -1425,7 +1185,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;⚫ &lt;strong&gt;Reviews not started:&lt;/strong&gt; set the Submission Deadline to generate target dates · confirm the bid&apos;s Slack channel ID · load RPD requirements as they&apos;re identified · kick off Pink Review from the console when strategy work begins&lt;/p&gt;</value>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;⚫ &lt;strong&gt;Reviews not started:&lt;/strong&gt; set the Submission Deadline to generate target dates · confirm the bid&apos;s Slack channel ID · load RPD requirements as they&apos;re identified · open Pink Review when strategy work begins&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText6</identifier>
@@ -1446,7 +1206,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🩷 &lt;strong&gt;Pink closes when:&lt;/strong&gt; win themes documented · proposal doc linked · risk log started · content owners assigned · 5 sign-offs (PropOps, Sales, SE, CS, Leadership)&lt;/p&gt;</value>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🩷 &lt;strong&gt;Pink closes when:&lt;/strong&gt; win themes documented · proposal doc linked · risk log started · content owners assigned · Strategy Aligned checkpoint (stamps who and when)&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText2</identifier>
@@ -1467,7 +1227,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🔴 &lt;strong&gt;Red closes when:&lt;/strong&gt; RPD 100% addressed · all Sales/CS + SE comments resolved · legal exceptions documented or None · 4 sign-offs (PropOps, Sales/CS, SE, Legal)&lt;/p&gt;</value>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🔴 &lt;strong&gt;Red closes when:&lt;/strong&gt; RPD 100% addressed · all Sales/CS + SE comments resolved · legal exceptions documented or None · Narrative Approved checkpoint&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText5</identifier>
@@ -1488,7 +1248,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🔵 &lt;strong&gt;Blue closes when:&lt;/strong&gt; bid price sheet linked · pricing assumptions documented · Deal Desk approved · sign-offs: PropOps + Sales VP/RSD (CS + Marketing as needed). Pricing locks when Blue completes.&lt;/p&gt;</value>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🔵 &lt;strong&gt;Blue closes when:&lt;/strong&gt; bid price sheet linked · pricing assumptions documented · Pricing Approved checkpoint (required before the bid can be submitted). Pricing locks when Blue completes.&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText3</identifier>
@@ -1509,7 +1269,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🟡 &lt;strong&gt;Gold closes when:&lt;/strong&gt; transmittal letter linked · risks accepted · executive approval · sign-offs: PropOps + Sales/CS Leadership (+ ELT when bid ≥ $500K)&lt;/p&gt;</value>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🟡 &lt;strong&gt;Gold closes when:&lt;/strong&gt; transmittal letter linked · risks accepted · Executive Approval checkpoint (ELT when bid ≥ $500K)&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText4</identifier>
@@ -1530,7 +1290,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🟢 &lt;strong&gt;Green closes when:&lt;/strong&gt; formatting + brand pass · page limits + fonts · file names correct · links verified · pricing matches approved version · final files linked · portal access confirmed · PropOps sign-off&lt;/p&gt;</value>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;🟢 &lt;strong&gt;Green closes when:&lt;/strong&gt; formatting + brand pass · page limits + fonts · file names correct · links verified · pricing matches approved version · final files linked · portal access confirmed · Final QC Complete checkpoint (required before the bid can be submitted)&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
                 <identifier>flexipage_richText</identifier>

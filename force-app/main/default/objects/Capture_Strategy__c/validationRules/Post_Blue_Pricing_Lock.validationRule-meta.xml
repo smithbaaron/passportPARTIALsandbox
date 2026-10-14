@@ -3,10 +3,10 @@
     <fullName>Post_Blue_Pricing_Lock</fullName>
     <active>true</active>
     <errorConditionFormula>NOT($Permission.Bypass_Color_Review_Gates) &amp;&amp;
-Pricing_Locked__c &amp;&amp;
+PRIORVALUE(Pricing_Locked__c) &amp;&amp;
 (ISCHANGED(Blue_Bid_Price_Sheet_Link__c) ||
  ISCHANGED(Blue_Pricing_Assumptions__c) ||
  ISCHANGED(Blue_Pricing_Approved__c)) &amp;&amp;
 (ISBLANK(Change_Justification__c) || NOT(Leadership_Change_Approval__c))</errorConditionFormula>
-    <errorMessage>Pricing is locked after Blue Review. Enter a Change Justification and obtain Leadership Change Approval first.</errorMessage>
+    <errorMessage>Pricing is locked after Blue Review. To change the price sheet, pricing assumptions or the Pricing Approved box, enter a Change Justification and obtain Leadership Change Approval first.</errorMessage>
 </ValidationRule>

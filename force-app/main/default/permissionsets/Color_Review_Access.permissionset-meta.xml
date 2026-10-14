@@ -3,6 +3,71 @@
     <description>Field access for the Color Review process on Capture Strategy + RFP Requirements. Assign to the proposal team and admins.</description>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Capture_Strategy__c.Green_QC_Complete_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Green_QC_Complete_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Capture_Strategy__c.Green_QC_Complete__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Gold_Executive_Approval_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Gold_Executive_Approval_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Blue_Pricing_Approved_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Blue_Pricing_Approved_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Red_Narrative_Approved_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Red_Narrative_Approved_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Capture_Strategy__c.Red_Narrative_Approved__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Pink_Strategy_Aligned_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Capture_Strategy__c.Pink_Strategy_Aligned_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Capture_Strategy__c.Pink_Strategy_Aligned__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Capture_Strategy__c.Skipped_Colors__c</field>
         <readable>true</readable>
     </fieldPermissions>

@@ -8,45 +8,44 @@ Deploy with `sf project deploy start --source-dir force-app --target-org <alias>
 
 | Flow | Trigger | What it does |
 |---|---|---|
-| **Sign-Off Stamper** | Capture Strategy, before save | Stamps the date on each sign-off box when first checked. Stamps a color's Completed Date automatically once its required sign-offs and deliverables are all in. Sets Pricing Locked when Blue completes. On a send-back (stage moved to an earlier color) increments Send Back Count and clears that color's and all later colors' sign-offs and Completed Dates (unlocking pricing if Blue is reopened). |
-| **Color Review Engine** | Capture Strategy, after save, only when stage / deadline / color stage changes | Computes Target Dates from `Color_Review_Config__mdt` (Target Offset) whenever a bid in Response In Progress has a Submission Deadline. When a color opens, sets its Due Date and Active Due Date from the SLA in the same metadata. Writes those in one update, then notifies on color open, completion, and deadline moves. |
-| **Color Review Reminders (Daily)** | Scheduled, 8:00 AM Eastern | Reminder the day before the active color closes, overdue notice the day after. Replaces the retired record-triggered *Color Review Reminders* flow. |
-| **Color Review Notify** | Subflow | Posts to the record's Chatter feed and, when `Slack_Channel_Email__c` is set, emails the same text to the bid's Slack channel. Failures never block the save. |
-| **Add Business Days** | Subflow | Adds / subtracts business days, skipping weekends and Setup > Holidays (exact-date and yearly fixed-date holidays). |
+| **Sign-Off Stamper** | Capture Strategy, before save | For each color's milestone checkbox, stamps Approved By (the saving user), Approved Date and the color's Completed Date when checked; clears all three when unchecked. Locks pricing while Blue is complete. Counts backward stage moves in Send Back Count. |
+| **Color Review Engine** | Capture Strategy, after save, only when stage / deadline / color stage changes | Computes Target Dates from `Color_Review_Config__mdt` (Target Offset) for bids in Response In Progress with a Submission Deadline. When a color opens, sets its Due Date and Active Due Date from the SLA. Writes those in one update, then notifies on color open, completion, and deadline moves. |
+| **Color Review Reminders (Daily)** | Scheduled, 8:00 AM Eastern | Reminder the day before the active color closes, overdue notice the day after. |
+| **Color Review Notify** | Subflow | Emails the bid's Slack channel (`Slack_Channel_Email__c`) and posts to Chatter as a fallback until Chatter is retired. Failures never block the save. |
+| **Add Business Days** | Subflow | Adds / subtracts business days, skipping weekends and Setup > Holidays. |
 
-## Gates (validation rules, all active)
+## Milestones (Oct 8 Prop Ops decision: no per-person sign-offs)
 
-- **No_Skipping_Colors** – a color can only open once the previous one has a Completed Date (Pink can be skipped via *Pink Skipped*). Blue also requires every RFP Requirement to be Validated or have a documented exception.
-- **Stage_Exit_Requires_Complete** – a bid cannot move from Response In Progress to Submitted / Shortlisted / Awarded until Color Review Stage is Complete. Cancel and no-bid stages are not blocked.
-- **Post_Blue_Pricing_Lock** – after Blue completes, pricing fields need a Change Justification plus Leadership Change Approval.
-- **Exception_Notes_Required** – Documented legal exceptions need notes.
-- **Sign_Off_<Role>_Only** (9 rules) – only a user holding that role's custom permission can *set* a sign-off box. Anyone can clear one.
-
-`Color_Review_Bypass` (custom permission `Bypass_Color_Review_Gates`) skips every gate above. Admins only.
-
-## Permission sets
-
-- **Color Review Access** – object/field access for the proposal team.
-- **Color Review Signer – PropOps / Sales / SE / CS / Leadership / Legal / Marketing / ELT** – one per role; assign to the people who sign in that capacity. Red's Sales/CS box accepts either Sales or CS. ELT is only required on bids of $500k+.
-
-## Required sign-offs for auto-completion
-
-| Color | Sign-offs | Deliverables |
+| Color | Checkpoint field | Stamps |
 |---|---|---|
-| Pink | PropOps, Sales, SE | Win themes, proposal doc link, content owners assigned |
-| Red | PropOps, Sales/CS, SE, Legal | Comments resolved, legal exceptions set, all RFP Requirements addressed |
-| Blue | PropOps, Sales Leadership | Bid price sheet link, pricing approved |
-| Gold | PropOps, Sales/CS Leadership, ELT if $500k+ | Transmittal letter link, risks accepted, executive approval |
-| Green | PropOps | Formatting, page limits, file names, links, pricing-matches checks |
+| Pink | Strategy Aligned | Pink_Strategy_Aligned_By / _Date, Pink Completed Date |
+| Red | Narrative Approved | Red_Narrative_Approved_By / _Date, Red Completed Date |
+| Blue | Pricing Approved | Blue_Pricing_Approved_By / _Date, Blue Completed Date, Pricing Locked |
+| Gold | Executive Approval | Gold_Executive_Approval_By / _Date, Gold Completed Date |
+| Green | Final QC Complete | Green_QC_Complete_By / _Date, Green Completed Date |
 
-CS, Leadership (Pink), Marketing and Non-author boxes are optional. A Completed Date can still be entered manually to override.
+Colors can be opened in any order and run in tandem. A color the bid moved past with no Completed Date is listed in **Skipped Colors**. The 36 legacy `*_SO_*` sign-off fields are no longer on the page or used by automation; delete them once the PIN team signs off.
+
+## Gates (validation rules)
+
+- **Stage_Exit_Requires_Complete** (active) – a bid cannot move from Response In Progress to Submitted / Shortlisted / Awarded until Pricing Approved and Final QC Complete are both checked. Cancel and no-bid stages are not blocked.
+- **Slack_Email_Required_For_Review** (active) – a color cannot be opened until Slack Channel Email is set.
+- **Post_Blue_Pricing_Lock** (active) – after Blue completes, pricing fields need a Change Justification plus Leadership Change Approval.
+- **Exception_Notes_Required** (active) – Documented legal exceptions need notes.
+- **No_Skipping_Colors** (inactive, kept for reference) – the strict order gate the team chose not to use.
+
+`Color_Review_Bypass` (custom permission `Bypass_Color_Review_Gates`) skips every active gate. Admins only.
+
+## Permission sets and reporting
+
+- **Color Review Access** – object/field access for the proposal team. Milestone boxes are editable; the By / Date stamps are read-only and written only by the flow.
+- **Color Review Reports / Color Review - Active Bids** – every bid in Response In Progress with stage, due status, skipped colors and who approved each milestone and when. Subscribe leadership to it weekly.
 
 ## Operational notes
 
 - Add company holidays in Setup > Holidays so SLAs skip them. Only exact-date and yearly fixed-date holidays are honored.
-- For Slack, enable *Send emails to this channel* on the bid's channel and paste the address into **Slack Channel Email** on the record.
-- `Color_Review_Config__mdt` drives SLA days and Target Offsets per color; the Engine reads both.
-- Completed Dates and sign-offs are stamped by automation; a send-back clears them so reviewers re-sign.
+- For Slack, enable *Send emails to this channel* on the bid's channel and paste the address into **Slack Channel Email** on the record. Opening a color requires it.
+- `Color_Review_Config__mdt` drives SLA days and Target Offsets per color.
 
 ## Conditional formatting (native, no package)
 

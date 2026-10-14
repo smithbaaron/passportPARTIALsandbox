@@ -15,14 +15,60 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>D_Clear_From</targetReference>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Pink</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stamp_Pink</name>
+        <label>Stamp Pink milestone</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Pink_Strategy_Aligned_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Pink_Strategy_Aligned_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Pink_Completed_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Red</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Clear_Pink</name>
-        <label>Clear Pink sign-offs</label>
+        <label>Clear Pink milestone</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Pink_Strategy_Aligned_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankDT</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Pink_Strategy_Aligned_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankText</elementReference>
+            </value>
+        </assignmentItems>
         <assignmentItems>
             <assignToReference>$Record.Pink_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
@@ -30,85 +76,61 @@
                 <elementReference>blankDT</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Red</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stamp_Red</name>
+        <label>Stamp Red milestone</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>$Record.Pink_SO_PropOps__c</assignToReference>
+            <assignToReference>$Record.Red_Narrative_Approved_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>false</booleanValue>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.Pink_SO_PropOps_Date__c</assignToReference>
+            <assignToReference>$Record.Red_Narrative_Approved_By__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>blankDT</elementReference>
+                <elementReference>$User.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.Pink_SO_Sales__c</assignToReference>
+            <assignToReference>$Record.Red_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_Sales_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_SE__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_SE_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_CS__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_CS_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_Leadership__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_Leadership_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Clear_Red</targetReference>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Blue</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Clear_Red</name>
-        <label>Clear Red sign-offs</label>
+        <label>Clear Red milestone</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Red_Narrative_Approved_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankDT</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Red_Narrative_Approved_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankText</elementReference>
+            </value>
+        </assignmentItems>
         <assignmentItems>
             <assignToReference>$Record.Red_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
@@ -116,71 +138,61 @@
                 <elementReference>blankDT</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Blue</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stamp_Blue</name>
+        <label>Stamp Blue milestone</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>$Record.Red_SO_PropOps__c</assignToReference>
+            <assignToReference>$Record.Blue_Pricing_Approved_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>false</booleanValue>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.Red_SO_PropOps_Date__c</assignToReference>
+            <assignToReference>$Record.Blue_Pricing_Approved_By__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>blankDT</elementReference>
+                <elementReference>$User.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.Red_SO_Sales_CS__c</assignToReference>
+            <assignToReference>$Record.Blue_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_Sales_CS_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_SE__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_SE_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_Legal__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_Legal_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Clear_Blue</targetReference>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Gold</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Clear_Blue</name>
-        <label>Clear Blue sign-offs</label>
+        <label>Clear Blue milestone</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Blue_Pricing_Approved_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankDT</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Blue_Pricing_Approved_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankText</elementReference>
+            </value>
+        </assignmentItems>
         <assignmentItems>
             <assignToReference>$Record.Blue_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
@@ -188,78 +200,61 @@
                 <elementReference>blankDT</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Gold</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stamp_Gold</name>
+        <label>Stamp Gold milestone</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>$Record.Blue_SO_PropOps__c</assignToReference>
+            <assignToReference>$Record.Gold_Executive_Approval_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>false</booleanValue>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.Blue_SO_PropOps_Date__c</assignToReference>
+            <assignToReference>$Record.Gold_Executive_Approval_By__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>blankDT</elementReference>
+                <elementReference>$User.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.Blue_SO_Sales_Leadership__c</assignToReference>
+            <assignToReference>$Record.Gold_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_Sales_Leadership_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_CS__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_CS_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_Marketing__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_Marketing_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pricing_Locked__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Clear_Gold</targetReference>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Green</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Clear_Gold</name>
-        <label>Clear Gold sign-offs</label>
+        <label>Clear Gold milestone</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Gold_Executive_Approval_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankDT</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Gold_Executive_Approval_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankText</elementReference>
+            </value>
+        </assignmentItems>
         <assignmentItems>
             <assignToReference>$Record.Gold_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
@@ -267,170 +262,30 @@
                 <elementReference>blankDT</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_PropOps__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_PropOps_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_Sales_CS_Leadership__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_Sales_CS_Leadership_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_ELT__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_ELT_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Clear_Green</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Clear_Green</name>
-        <label>Clear Green sign-offs</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>$Record.Green_Completed_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Green_SO_PropOps__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Green_SO_PropOps_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Green_SO_Non_Author__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Green_SO_Non_Author_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>blankDT</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <isGoTo>true</isGoTo>
-            <targetReference>D_Pink_Done</targetReference>
+            <targetReference>D_Green</targetReference>
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Pink_Completed</name>
-        <label>Stamp Pink completed</label>
+        <name>Stamp_Green</name>
+        <label>Stamp Green milestone</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>$Record.Pink_Completed_Date__c</assignToReference>
+            <assignToReference>$Record.Green_QC_Complete_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>D_Red_Done</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Red_Completed</name>
-        <label>Stamp Red completed</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>$Record.Red_Completed_Date__c</assignToReference>
+            <assignToReference>$Record.Green_QC_Complete_By__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
+                <elementReference>$User.Id</elementReference>
             </value>
         </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>D_Blue_Done</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Blue_Completed</name>
-        <label>Stamp Blue completed</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_Completed_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>D_Gold_Done</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Gold_Completed</name>
-        <label>Stamp Gold completed</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_Completed_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>D_Green_Done</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Green_Completed</name>
-        <label>Stamp Green completed</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>$Record.Green_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
@@ -444,7 +299,38 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Pricing_Locked</name>
+        <name>Clear_Green</name>
+        <label>Clear Green milestone</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Green_QC_Complete_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankDT</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Green_QC_Complete_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankText</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Green_Completed_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>blankDT</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>D_Pricing_Lock</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Lock_Pricing</name>
         <label>Lock pricing</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
@@ -455,150 +341,27 @@
                 <booleanValue>true</booleanValue>
             </value>
         </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Stamp_sign_off_dates</targetReference>
-        </connector>
     </assignments>
     <assignments>
-        <name>Stamp_sign_off_dates</name>
-        <label>Stamp sign-off dates</label>
+        <name>Unlock_Pricing</name>
+        <label>Unlock pricing</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>$Record.Pink_SO_PropOps_Date__c</assignToReference>
+            <assignToReference>$Record.Pricing_Locked__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>fPinkSOPropOps</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_Sales_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fPinkSOSales</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_SE_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fPinkSOSE</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_CS_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fPinkSOCS</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Pink_SO_Leadership_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fPinkSOLeadership</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_PropOps_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fRedSOPropOps</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_Sales_CS_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fRedSOSalesCS</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_SE_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fRedSOSE</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Red_SO_Legal_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fRedSOLegal</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_PropOps_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fBlueSOPropOps</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_Sales_Leadership_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fBlueSOSalesLeadership</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_CS_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fBlueSOCS</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Blue_SO_Marketing_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fBlueSOMarketing</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_PropOps_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fGoldSOPropOps</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_Sales_CS_Leadership_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fGoldSOSalesCSLeadership</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Gold_SO_ELT_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fGoldSOELT</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Green_SO_PropOps_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fGreenSOPropOps</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>$Record.Green_SO_Non_Author_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>fGreenSONonAuthor</elementReference>
+                <booleanValue>false</booleanValue>
             </value>
         </assignmentItems>
     </assignments>
     <decisions>
         <name>D_Send_Back</name>
-        <label>Sent back to an earlier color?</label>
+        <label>Moved back to an earlier color?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>D_Pink_Done</targetReference>
+            <targetReference>D_Pink</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -612,275 +375,131 @@
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Send_Back</targetReference>
+                <targetReference>Assign_Send_Back</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
-        <name>D_Clear_From</name>
-        <label>Which color was it sent back to?</label>
+        <name>D_Pink</name>
+        <label>Pink milestone changed?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>D_Pink_Done</targetReference>
+            <targetReference>D_Red</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <defaultConnectorLabel>No change</defaultConnectorLabel>
         <rules>
-            <name>Back_to_Pink</name>
+            <name>Pink_checked</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>fNewOrder</leftValueReference>
+                <leftValueReference>$Record.Pink_Strategy_Aligned__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <numberValue>1.0</numberValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <connector>
-                    <targetReference>Clear_Pink</targetReference>
-            </connector>
-            <label>Pink</label>
-        </rules>
-        <rules>
-            <name>Back_to_Red</name>
-            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>fNewOrder</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>2.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                    <isGoTo>true</isGoTo>
-                    <targetReference>Clear_Red</targetReference>
-            </connector>
-            <label>Red</label>
-        </rules>
-        <rules>
-            <name>Back_to_Blue</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>fNewOrder</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>3.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                    <isGoTo>true</isGoTo>
-                    <targetReference>Clear_Blue</targetReference>
-            </connector>
-            <label>Blue</label>
-        </rules>
-        <rules>
-            <name>Back_to_Gold</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>fNewOrder</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>4.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                    <isGoTo>true</isGoTo>
-                    <targetReference>Clear_Gold</targetReference>
-            </connector>
-            <label>Gold</label>
-        </rules>
-        <rules>
-            <name>Back_to_Green</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>fNewOrder</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>5.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                    <isGoTo>true</isGoTo>
-                    <targetReference>Clear_Green</targetReference>
-            </connector>
-            <label>Green</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>D_Pink_Done</name>
-        <label>Pink ready to complete?</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>D_Red_Done</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Pink_ready</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Pink_Completed_Date__c</leftValueReference>
+                <leftValueReference>$Record.Pink_Strategy_Aligned_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Stamp_Pink</targetReference>
+            </connector>
+            <label>Checked now</label>
+        </rules>
+        <rules>
+            <name>Pink_unchecked</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Pink_SO_PropOps__c</leftValueReference>
+                <leftValueReference>$Record.Pink_Strategy_Aligned__c</leftValueReference>
                 <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Pink_SO_Sales__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Pink_SO_SE__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Pink_Content_Owners_Assigned__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Pink_Win_Themes__c</leftValueReference>
-                <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Pink_Proposal_Doc_Link__c</leftValueReference>
+                <leftValueReference>$Record.Pink_Strategy_Aligned_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Pink_Completed</targetReference>
+                <targetReference>Clear_Pink</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Unchecked</label>
         </rules>
     </decisions>
     <decisions>
-        <name>D_Red_Done</name>
-        <label>Red ready to complete?</label>
+        <name>D_Red</name>
+        <label>Red milestone changed?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>D_Blue_Done</targetReference>
+            <targetReference>D_Blue</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <defaultConnectorLabel>No change</defaultConnectorLabel>
         <rules>
-            <name>Red_ready</name>
+            <name>Red_checked</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Red_Completed_Date__c</leftValueReference>
+                <leftValueReference>$Record.Red_Narrative_Approved__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Red_Narrative_Approved_Date__c</leftValueReference>
                 <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Red_SO_PropOps__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Red_SO_Sales_CS__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Red_SO_SE__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Red_SO_Legal__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Red_Comments_Resolved__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Red_Legal_Exceptions__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>fRedRPDOk</leftValueReference>
-                <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Red_Completed</targetReference>
+                <targetReference>Stamp_Red</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Checked now</label>
+        </rules>
+        <rules>
+            <name>Red_unchecked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Red_Narrative_Approved__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Red_Narrative_Approved_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_Red</targetReference>
+            </connector>
+            <label>Unchecked</label>
         </rules>
     </decisions>
     <decisions>
-        <name>D_Blue_Done</name>
-        <label>Blue ready to complete?</label>
+        <name>D_Blue</name>
+        <label>Blue milestone changed?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>D_Gold_Done</targetReference>
+            <targetReference>D_Gold</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <defaultConnectorLabel>No change</defaultConnectorLabel>
         <rules>
-            <name>Blue_ready</name>
+            <name>Blue_checked</name>
             <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Blue_Completed_Date__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Blue_SO_PropOps__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Blue_SO_Sales_Leadership__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
             <conditions>
                 <leftValueReference>$Record.Blue_Pricing_Approved__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -889,65 +508,52 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Blue_Bid_Price_Sheet_Link__c</leftValueReference>
+                <leftValueReference>$Record.Blue_Pricing_Approved_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stamp_Blue</targetReference>
+            </connector>
+            <label>Checked now</label>
+        </rules>
+        <rules>
+            <name>Blue_unchecked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Blue_Pricing_Approved__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Blue_Pricing_Approved_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Blue_Completed</targetReference>
+                <targetReference>Clear_Blue</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Unchecked</label>
         </rules>
     </decisions>
     <decisions>
-        <name>D_Gold_Done</name>
-        <label>Gold ready to complete?</label>
+        <name>D_Gold</name>
+        <label>Gold milestone changed?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>D_Green_Done</targetReference>
+            <targetReference>D_Green</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <defaultConnectorLabel>No change</defaultConnectorLabel>
         <rules>
-            <name>Gold_ready</name>
+            <name>Gold_checked</name>
             <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Gold_Completed_Date__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Gold_SO_PropOps__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Gold_SO_Sales_CS_Leadership__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>fGoldELTOk</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Gold_Risks_Accepted__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
             <conditions>
                 <leftValueReference>$Record.Gold_Executive_Approval__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -956,96 +562,102 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Gold_Transmittal_Letter_Link__c</leftValueReference>
+                <leftValueReference>$Record.Gold_Executive_Approval_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stamp_Gold</targetReference>
+            </connector>
+            <label>Checked now</label>
+        </rules>
+        <rules>
+            <name>Gold_unchecked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Gold_Executive_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Gold_Executive_Approval_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Gold_Completed</targetReference>
+                <targetReference>Clear_Gold</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Unchecked</label>
         </rules>
     </decisions>
     <decisions>
-        <name>D_Green_Done</name>
-        <label>Green ready to complete?</label>
+        <name>D_Green</name>
+        <label>Green milestone changed?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
             <targetReference>D_Pricing_Lock</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <defaultConnectorLabel>No change</defaultConnectorLabel>
         <rules>
-            <name>Green_ready</name>
+            <name>Green_checked</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Green_Completed_Date__c</leftValueReference>
+                <leftValueReference>$Record.Green_QC_Complete__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Green_QC_Complete_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Stamp_Green</targetReference>
+            </connector>
+            <label>Checked now</label>
+        </rules>
+        <rules>
+            <name>Green_unchecked</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Green_SO_PropOps__c</leftValueReference>
+                <leftValueReference>$Record.Green_QC_Complete__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Green_Formatting_Check__c</leftValueReference>
-                <operator>EqualTo</operator>
+                <leftValueReference>$Record.Green_QC_Complete_Date__c</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Green_Page_Limits_Met__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Green_File_Names_Correct__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Green_Links_Verified__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Green_Pricing_Matches_Approved__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Green_Completed</targetReference>
+                <targetReference>Clear_Green</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Unchecked</label>
         </rules>
     </decisions>
     <decisions>
         <name>D_Pricing_Lock</name>
-        <label>Lock pricing?</label>
+        <label>Pricing lock state</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>Stamp_sign_off_dates</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <defaultConnectorLabel>No change</defaultConnectorLabel>
         <rules>
-            <name>Blue_done</name>
+            <name>Lock</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Blue_Completed_Date__c</leftValueReference>
@@ -1062,25 +674,35 @@
                 </rightValue>
             </conditions>
             <connector>
-                    <targetReference>Assign_Pricing_Locked</targetReference>
+                <targetReference>Lock_Pricing</targetReference>
             </connector>
-            <label>Blue complete and not yet locked</label>
+            <label>Blue complete, not locked</label>
+        </rules>
+        <rules>
+            <name>Unlock</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Blue_Completed_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Pricing_Locked__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Unlock_Pricing</targetReference>
+            </connector>
+            <label>Blue reopened, still locked</label>
         </rules>
     </decisions>
-    <description>Before-save. (1) Send-back: when Color Review Stage moves backward to an earlier color, increments Send Back Count and clears the Completed Date and sign-offs of that color and every later color (and unlocks pricing if Blue is reopened). (2) Auto-complete: stamps a color's Completed Date the moment its required sign-offs and deliverables are all in. (3) Locks pricing once Blue is complete. (4) Stamps the date on each sign-off box when it is first checked.</description>
+    <description>Before-save. For each color's milestone checkbox (Pink Strategy Aligned, Red Narrative Approved, Blue Pricing Approved, Gold Executive Approval, Green Final QC Complete): when checked, stamps Approved By (the saving user), Approved Date and the color's Completed Date; when unchecked, clears all three. Locks pricing while Blue is complete. Counts backward stage moves in Send Back Count. Per the Oct 8 Prop Ops decision there are no per-person sign-offs and no clearing on send-back.</description>
     <environments>Default</environments>
-    <formulas>
-        <name>fOldOrder</name>
-        <dataType>Number</dataType>
-        <expression>CASE(TEXT({!$Record__Prior.Color_Review_Stage__c}), "Pink Review",1, "Red Review",2, "Blue Review",3, "Gold Review",4, "Green Review",5, "Complete",6, 0)</expression>
-        <scale>0</scale>
-    </formulas>
-    <formulas>
-        <name>fNewOrder</name>
-        <dataType>Number</dataType>
-        <expression>CASE(TEXT({!$Record.Color_Review_Stage__c}), "Pink Review",1, "Red Review",2, "Blue Review",3, "Gold Review",4, "Green Review",5, "Complete",6, 0)</expression>
-        <scale>0</scale>
-    </formulas>
     <formulas>
         <name>fIsSendBack</name>
         <dataType>Boolean</dataType>
@@ -1091,106 +713,6 @@
         <dataType>Number</dataType>
         <expression>BLANKVALUE({!$Record.Send_Back_Count__c}, 0) + 1</expression>
         <scale>0</scale>
-    </formulas>
-    <formulas>
-        <name>fRedRPDOk</name>
-        <dataType>Boolean</dataType>
-        <expression>OR(BLANKVALUE({!$Record.Total_Requirements__c}, 0) = 0, BLANKVALUE({!$Record.Addressed_Requirements__c}, 0) &gt;= BLANKVALUE({!$Record.Total_Requirements__c}, 0))</expression>
-    </formulas>
-    <formulas>
-        <name>fGoldELTOk</name>
-        <dataType>Boolean</dataType>
-        <expression>OR(BLANKVALUE({!$Record.Related_Opportunity__r.Amount}, 0) &lt; 500000, {!$Record.Gold_SO_ELT__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fPinkSOPropOps</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Pink_SO_PropOps__c}, ISBLANK({!$Record.Pink_SO_PropOps_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Pink_SO_PropOps_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fPinkSOSales</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Pink_SO_Sales__c}, ISBLANK({!$Record.Pink_SO_Sales_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Pink_SO_Sales_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fPinkSOSE</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Pink_SO_SE__c}, ISBLANK({!$Record.Pink_SO_SE_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Pink_SO_SE_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fPinkSOCS</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Pink_SO_CS__c}, ISBLANK({!$Record.Pink_SO_CS_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Pink_SO_CS_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fPinkSOLeadership</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Pink_SO_Leadership__c}, ISBLANK({!$Record.Pink_SO_Leadership_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Pink_SO_Leadership_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fRedSOPropOps</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Red_SO_PropOps__c}, ISBLANK({!$Record.Red_SO_PropOps_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Red_SO_PropOps_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fRedSOSalesCS</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Red_SO_Sales_CS__c}, ISBLANK({!$Record.Red_SO_Sales_CS_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Red_SO_Sales_CS_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fRedSOSE</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Red_SO_SE__c}, ISBLANK({!$Record.Red_SO_SE_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Red_SO_SE_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fRedSOLegal</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Red_SO_Legal__c}, ISBLANK({!$Record.Red_SO_Legal_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Red_SO_Legal_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fBlueSOPropOps</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Blue_SO_PropOps__c}, ISBLANK({!$Record.Blue_SO_PropOps_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Blue_SO_PropOps_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fBlueSOSalesLeadership</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Blue_SO_Sales_Leadership__c}, ISBLANK({!$Record.Blue_SO_Sales_Leadership_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Blue_SO_Sales_Leadership_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fBlueSOCS</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Blue_SO_CS__c}, ISBLANK({!$Record.Blue_SO_CS_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Blue_SO_CS_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fBlueSOMarketing</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Blue_SO_Marketing__c}, ISBLANK({!$Record.Blue_SO_Marketing_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Blue_SO_Marketing_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fGoldSOPropOps</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Gold_SO_PropOps__c}, ISBLANK({!$Record.Gold_SO_PropOps_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Gold_SO_PropOps_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fGoldSOSalesCSLeadership</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Gold_SO_Sales_CS_Leadership__c}, ISBLANK({!$Record.Gold_SO_Sales_CS_Leadership_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Gold_SO_Sales_CS_Leadership_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fGoldSOELT</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Gold_SO_ELT__c}, ISBLANK({!$Record.Gold_SO_ELT_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Gold_SO_ELT_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fGreenSOPropOps</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Green_SO_PropOps__c}, ISBLANK({!$Record.Green_SO_PropOps_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Green_SO_PropOps_Date__c})</expression>
-    </formulas>
-    <formulas>
-        <name>fGreenSONonAuthor</name>
-        <dataType>DateTime</dataType>
-        <expression>IF(AND({!$Record.Green_SO_Non_Author__c}, ISBLANK({!$Record.Green_SO_Non_Author_Date__c})), {!$Flow.CurrentDateTime}, {!$Record.Green_SO_Non_Author_Date__c})</expression>
     </formulas>
     <interviewLabel>Sign-Off Stamper {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Sign-Off Stamper</label>
@@ -1222,6 +744,13 @@
     <variables>
         <name>blankDT</name>
         <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>blankText</name>
+        <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>

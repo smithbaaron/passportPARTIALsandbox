@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pink_Strategy_Aligned__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Pink Review milestone checkpoint. Checking it stamps Approved By / Approved Date and the Pink Completed Date.</description>
+    <externalId>false</externalId>
+    <label>Strategy Aligned</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
