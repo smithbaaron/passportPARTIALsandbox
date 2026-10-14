@@ -173,16 +173,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Color_Review_Progress__c</fieldItem>
-                <identifier>RecordColor_Review_Progress_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Submission_Deadline__c</fieldItem>
                 <identifier>RecordSubmission_Deadline_cField</identifier>
             </fieldInstance>
@@ -253,6 +243,20 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Send_Back_Count__c</fieldItem>
                 <identifier>RecordSend_Back_Count_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>conditionalFormatRuleset</name>
+                    <value>Color_Review_Skipped</value>
+                </fieldInstanceProperties>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Skipped_Colors__c</fieldItem>
+                <identifier>RecordSkipped_Colors_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-d8f2b4c8-0999-4415-a4bb-f139227436fb</name>

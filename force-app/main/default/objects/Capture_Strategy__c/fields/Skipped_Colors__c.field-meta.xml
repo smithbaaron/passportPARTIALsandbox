@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skipped_Colors__c</fullName>
+    <description>Colors the bid moved past without a Completed Date. &quot;None&quot; when nothing was skipped. Reportable and filterable.</description>
+    <externalId>false</externalId>
+    <formula>IF(LEN(IF(AND(ISBLANK(Pink_Completed_Date__c), Color_Review_Stage_Order__c &gt; 1), &quot;, Pink&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Red_Completed_Date__c), Color_Review_Stage_Order__c &gt; 2), &quot;, Red&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Blue_Completed_Date__c), Color_Review_Stage_Order__c &gt; 3), &quot;, Blue&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Gold_Completed_Date__c), Color_Review_Stage_Order__c &gt; 4), &quot;, Gold&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Green_Completed_Date__c), Color_Review_Stage_Order__c &gt; 5), &quot;, Green&quot;, &quot;&quot;)) = 0, &quot;None&quot;, MID(IF(AND(ISBLANK(Pink_Completed_Date__c), Color_Review_Stage_Order__c &gt; 1), &quot;, Pink&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Red_Completed_Date__c), Color_Review_Stage_Order__c &gt; 2), &quot;, Red&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Blue_Completed_Date__c), Color_Review_Stage_Order__c &gt; 3), &quot;, Blue&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Gold_Completed_Date__c), Color_Review_Stage_Order__c &gt; 4), &quot;, Gold&quot;, &quot;&quot;) &amp; IF(AND(ISBLANK(Green_Completed_Date__c), Color_Review_Stage_Order__c &gt; 5), &quot;, Green&quot;, &quot;&quot;), 3, 60))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Skipped Colors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

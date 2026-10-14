@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Color_Review_Progress__c</fullName>
+    <description>Plain-text status of each color (Done / Skipped / Active / Pending) for list views and reports. The record page shows the same information with icons.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Color_Review_Stage__c, &quot;Not Started&quot;), &quot;Not started&quot;, &quot;Pink: &quot; &amp; IF(NOT(ISBLANK(Pink_Completed_Date__c)), &quot;Done&quot;, IF(Color_Review_Stage_Order__c &gt; 1, &quot;Skipped&quot;, IF(Color_Review_Stage_Order__c = 1, &quot;Active&quot;, &quot;Pending&quot;))) &amp; &quot; | &quot; &amp; &quot;Red: &quot; &amp; IF(NOT(ISBLANK(Red_Completed_Date__c)), &quot;Done&quot;, IF(Color_Review_Stage_Order__c &gt; 2, &quot;Skipped&quot;, IF(Color_Review_Stage_Order__c = 2, &quot;Active&quot;, &quot;Pending&quot;))) &amp; &quot; | &quot; &amp; &quot;Blue: &quot; &amp; IF(NOT(ISBLANK(Blue_Completed_Date__c)), &quot;Done&quot;, IF(Color_Review_Stage_Order__c &gt; 3, &quot;Skipped&quot;, IF(Color_Review_Stage_Order__c = 3, &quot;Active&quot;, &quot;Pending&quot;))) &amp; &quot; | &quot; &amp; &quot;Gold: &quot; &amp; IF(NOT(ISBLANK(Gold_Completed_Date__c)), &quot;Done&quot;, IF(Color_Review_Stage_Order__c &gt; 4, &quot;Skipped&quot;, IF(Color_Review_Stage_Order__c = 4, &quot;Active&quot;, &quot;Pending&quot;))) &amp; &quot; | &quot; &amp; &quot;Green: &quot; &amp; IF(NOT(ISBLANK(Green_Completed_Date__c)), &quot;Done&quot;, IF(Color_Review_Stage_Order__c &gt; 5, &quot;Skipped&quot;, IF(Color_Review_Stage_Order__c = 5, &quot;Active&quot;, &quot;Pending&quot;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Color Review Summary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
