@@ -57,4 +57,4 @@ Two rulesets in `uiFormatSpecificationSets/` replace the emoji indicators on the
 
 Available icons in this org: circle, square, diamond, heart, rocket, thumbs_up, thumbs_down, question_mark, happy_face, neutral_face, sad_face. Colors: red, blue, green, orange, purple, gray.
 
-Attach each ruleset to its field in Lightning App Builder (select the field, Conditional Formatting, pick the ruleset). The Metadata API property that stores that link is not documented and the page must be retrieved after attaching to capture it in source.
+The page attaches each ruleset through a field-instance property on the FlexiPage, `conditionalFormatRuleset`, whose value is the ruleset API name. Both attachments are in `flexipages/Capture_Strategy_Record_Page1`. Deploy the rulesets together with, or before, the page.

@@ -220,6 +220,10 @@
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
+                    <name>conditionalFormatRuleset</name>
+                    <value>Color_Review_Stage_Indicator</value>
+                </fieldInstanceProperties>
+                <fieldInstanceProperties>
                     <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
@@ -229,6 +233,10 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>conditionalFormatRuleset</name>
+                    <value>Color_Review_Due_Status</value>
+                </fieldInstanceProperties>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
                     <value>readonly</value>
